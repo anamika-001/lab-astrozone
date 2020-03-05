@@ -44,15 +44,18 @@ public class AstroFormController extends HttpServlet {
 		//Create one and call the same
 		///as define above there is onle three string passing but where i defined constructor there is 4 string thatwhy here throwing error
 		
-	 String email = new String();
-		User user=new User(name,gender,dob,email);
+	 
+		User user=new User(name,gender,date,month);
 		user.setName(name);
-		
-		user.setDob(dob);
 		user.setGender(gender);
 		
+		user.setDate(date);
+		user.setMonth(month);
+		
+		
         AstroCalculator astro= new  AstroCalculator();
-		 String astrosign =astro.findSign();
+		
+		String astrosign =astro.findSign(user);
 		
 		if(astrosign.equals("Aquarius")){
 			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/Outputview.jsp");

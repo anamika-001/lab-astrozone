@@ -2,14 +2,14 @@ package model;
 
 public class User{
 	private String name;
-	private String email;
-	private String dob;
+	private String month;
+	private String date;
 	private String gender;
-	public User(String name, String email, String dob, String gender) {
+	public User(String name, String month, String date, String gender) {
 		super();
 		this.name = name;
-		this.email = email;
-		this.dob = dob;
+		this.month = month;
+		this.date = date;
 		this.gender = gender;
 	}
 	public String getName() {
@@ -18,17 +18,17 @@ public class User{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getEmail() {
-		return email;
+	public String getMonth() {
+		return month;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMonth(String month) {
+		this.month = month;
 	}
-	public String getDob() {
-		return dob;
+	public String getDate() {
+		return date;
 	}
-	public void setDob(String dob) {
-		this.dob = dob;
+	public void setDate(String date) {
+		this.date = date;
 	}
 	public String getGender() {
 		return gender;
@@ -36,5 +36,6 @@ public class User{
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
 	
 }

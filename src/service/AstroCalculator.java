@@ -5,12 +5,12 @@ import model.User;
 
 public class AstroCalculator {
 	
-	 public String findSign() {
-		 String month;
-		 String date;
+	 public String findSign(model.User u) {
+		 String month=u.getMonth();
+		String date=u.getDate();
 		
 		if(month=="12") {
-			if(date<"22") {
+			if(date < ="22") {
 				return "Sagitarius";
 			}
 			else {
@@ -75,7 +75,7 @@ public class AstroCalculator {
 			
 		}
 		else if(month=="07") {
-			if(date<"22") {
+			if(date<"23") {
 				return "cancer";
 			}
 			else {
@@ -84,7 +84,7 @@ public class AstroCalculator {
 			
 		}
 		else if(month=="08") {
-			if(date<"22") {
+			if(date<"23") {
 				return "leo";
 			}
 			else {
@@ -93,7 +93,7 @@ public class AstroCalculator {
 			
 		}
 		else if(month=="09") {
-			if(date<"22") {
+			if(date<"23") {
 				return "virgo";
 			}
 			else {
@@ -102,42 +102,32 @@ public class AstroCalculator {
 			
 		}
 		else if(month=="10") {
-			if(date<"22") {
-				return "Sagitarius";
+			if(date<"23") {
+				return "libra";
 			}
 			else {
-				return "capricorn";
+				return "scorpio";
 			}
 			
 		}
-		else if(month=="10") {
+		else {
 			if(date<"22") {
-				return "Sagitarius";
+				return "scorpio";
 			}
 			else {
-				return "capricorn";
-			}
-			
-		}
-		else if(month=="11") {
-			if(date<"22") {
 				return "Sagitarius";
 			}
-			else {
-				return "capricorn";
-			}
 			
+		
 		}
-		else if(month=="12") {
-			if(date<"22") {
-				return "Sagitarius";
-			}
-			else {
-				return "capricorn";
-			}
-			
-		}
-	
+		
 	
 	 }
-}
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
